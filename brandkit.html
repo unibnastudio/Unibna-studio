@@ -194,7 +194,7 @@ body{
 branding tools + content ideas for student businesses and small creators
 </div>
 
-<!-- TOP SECTION -->
+<!-- TOP -->
 
 <div class="product-top">
 
@@ -202,9 +202,9 @@ branding tools + content ideas for student businesses and small creators
 <div class="gallery">
 
 <div class="thumbnails">
-<img src="kit1.png" onclick="changeImage(this)">
-<img src="kit2.png" onclick="changeImage(this)">
-<img src="kit3.png" onclick="changeImage(this)">
+<img src="kit1.png" onclick="setImage(0)">
+<img src="kit2.png" onclick="setImage(1)">
+<img src="kit3.png" onclick="setImage(2)">
 </div>
 
 <div class="main-image">
@@ -223,11 +223,10 @@ branding tools + content ideas for student businesses and small creators
 <div class="price">$12</div>
 
 <p class="note">
-Instant digital download. Sent after payment via Instagram DM.
+Instant digital download sent after payment via DM.
 <br><br>
 
-Payments accepted:
-<br>
+Payments accepted:<br>
 • Zelle<br>
 • Cash App
 </p>
@@ -240,7 +239,7 @@ Payments accepted:
 
 </div>
 
-<!-- WHAT'S INCLUDED -->
+<!-- INCLUDED -->
 
 <h2 class="section-title">what’s included</h2>
 
@@ -257,9 +256,30 @@ Payments accepted:
 </div>
 
 <script>
-function changeImage(element){
-  document.getElementById("currentImage").src = element.src;
+
+const images = ["kit1.png", "kit2.png", "kit3.png"];
+let currentIndex = 0;
+
+function setImage(index){
+  currentIndex = index;
+  document.getElementById("currentImage").src = images[index];
 }
+
+/* KEYBOARD NAVIGATION */
+document.addEventListener("keydown", function(event){
+
+  if(event.key === "ArrowRight"){
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("currentImage").src = images[currentIndex];
+  }
+
+  if(event.key === "ArrowLeft"){
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("currentImage").src = images[currentIndex];
+  }
+
+});
+
 </script>
 
 </body>
