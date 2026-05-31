@@ -42,16 +42,16 @@ body{
   line-height:1.7;
 }
 
-/* PRODUCT LAYOUT */
+/* TOP PRODUCT LAYOUT */
 
-.product{
+.product-top{
   display:flex;
   gap:40px;
   align-items:flex-start;
-  margin-bottom:60px;
+  margin-bottom:50px;
 }
 
-/* LEFT SIDE (GALLERY) */
+/* GALLERY */
 
 .gallery{
   display:flex;
@@ -89,31 +89,53 @@ body{
   display:block;
 }
 
-/* RIGHT SIDE (INFO) */
+/* RIGHT SIDE */
 
 .info{
   flex:1;
 }
 
-.section-title{
-  font-family:'Playfair Display', serif;
-  font-size:30px;
+/* PRICING CARD */
+
+.price-card{
+  background:white;
+  padding:26px;
+  border-radius:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  margin-bottom:20px;
+}
+
+.price-tag{
+  display:inline-block;
+  background:#6D6943;
+  color:#F4F3EE;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:1px;
   margin-bottom:12px;
 }
 
 .price{
-  font-size:34px;
-  margin:10px 0 20px;
+  font-size:38px;
   font-family:'Playfair Display', serif;
+  margin-bottom:10px;
 }
 
 .note{
   color:#6D6943;
-  line-height:1.9;
-  font-size:15px;
+  line-height:1.8;
+  font-size:14px;
 }
 
-/* INCLUDED LIST */
+/* INCLUDED SECTION */
+
+.section-title{
+  font-family:'Playfair Display', serif;
+  font-size:30px;
+  margin-bottom:12px;
+  margin-top:30px;
+}
 
 .list{
   color:#6D6943;
@@ -126,7 +148,7 @@ body{
 
 .back{
   display:inline-block;
-  margin-top:40px;
+  margin-top:20px;
   text-decoration:none;
   color:#48372F;
   border:1px solid #48372F;
@@ -143,7 +165,7 @@ body{
 /* MOBILE */
 
 @media (max-width:900px){
-  .product{
+  .product-top{
     flex-direction:column;
   }
 
@@ -172,9 +194,9 @@ body{
 branding tools + content ideas for student businesses and small creators
 </div>
 
-<!-- PRODUCT SECTION -->
+<!-- TOP SECTION -->
 
-<div class="product">
+<div class="product-top">
 
 <!-- LEFT -->
 <div class="gallery">
@@ -194,6 +216,32 @@ branding tools + content ideas for student businesses and small creators
 <!-- RIGHT -->
 <div class="info">
 
+<div class="price-card">
+
+<div class="price-tag">DIGITAL PRODUCT</div>
+
+<div class="price">$12</div>
+
+<p class="note">
+Instant digital download. Sent after payment via Instagram DM.
+<br><br>
+
+Payments accepted:
+<br>
+• Zelle<br>
+• Cash App
+</p>
+
+</div>
+
+<a class="back" href="index.html">back to website</a>
+
+</div>
+
+</div>
+
+<!-- WHAT'S INCLUDED -->
+
 <h2 class="section-title">what’s included</h2>
 
 <div class="list">
@@ -205,26 +253,6 @@ branding tools + content ideas for student businesses and small creators
 • caption starters <br>
 • branding guidance <br>
 </div>
-
-<div class="section-title">price</div>
-<div class="price">$12</div>
-
-<p class="note">
-To purchase this digital product, message @unibna.studio on Instagram or use the contact form on the website.
-<br><br>
-
-Payments accepted:<br>
-• Zelle<br>
-• Cash App<br><br>
-
-After payment, the full kit will be sent directly to your email.
-</p>
-
-</div>
-
-</div>
-
-<a class="back" href="index.html">back to website</a>
 
 </div>
 
